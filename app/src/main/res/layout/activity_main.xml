@@ -74,6 +74,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:backgroundTint="@color/blue"
-        android:text="@string/btnCadastrar" />
+        android:text="@string/btnConfirmar" />
 
 </LinearLayout>

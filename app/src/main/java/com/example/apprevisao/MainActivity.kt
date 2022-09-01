@@ -13,13 +13,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val edtNome:EditText = findViewById(R.id.edtNome)
-        val edtEnd:EditText = findViewById(R.id.edtEndereco)
-        val edtCep:EditText = findViewById(R.id.edtCep)
+        val edtEndereco:EditText = findViewById(R.id.edtEndereco)
         val edtBairro:EditText = findViewById(R.id.edtBairro)
+        val edtCep:EditText = findViewById(R.id.edtCep)
+
         val btnCadastrar:Button = findViewById(R.id.btnCadastrar)
 
        btnCadastrar.setOnClickListener{
            val intent = Intent(this, RespostaActivity::class.java)
+           intent.putExtra("nome", edtNome.text.toString())
+           intent.putExtra("endereco", edtEndereco.text.toString())
+           intent.putExtra("bairro", edtBairro.text.toString())
+           intent.putExtra("cep", edtCep.text.toString())
            startActivity(intent)
        }
 
